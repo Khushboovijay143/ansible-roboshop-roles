@@ -1,0 +1,7 @@
+- name: Install mysql client
+  ansible.builtin.yum:
+    name: mysql
+    state: installed
+
+- name: load mysql schema
+  ansible.legacy.shell: mysql -h mysql.vijaydeepak0812.online -uroot -pRoboShop@1 < /app/schema/shipping.sql
